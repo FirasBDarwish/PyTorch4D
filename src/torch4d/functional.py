@@ -90,7 +90,7 @@ def drop_block4d(input: Tensor, p: float, block_size: Union[int, tuple], inplace
         if block_size[3] != 1:
             noise = F.pad(noise, [(block_size[3]// 2)]*2 + [0]*6, value=0)
     noise, _ = max_pool4d(
-        noise, stride=(1, 1, 1, 1), kernel_size=(block_size[0], block_size[1], block_size[2], block_size[3]), padding=0
+        noise, stride=(1, 1, 1, 1), kernel_size=(block_size[0], block_size[1], block_size[2], block_size[3])
     )
 
     # if block_size is even, then remove final element of that tensor (matching dimension as blocksize)
