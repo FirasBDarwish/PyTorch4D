@@ -8,7 +8,7 @@ from torch import nn, Tensor
 import torch.nn.functional as F
 from typing import Union
 
-from functional import max_pool4d, drop_block4d
+from torch4d.functional import max_pool4d, drop_block4d
 
 class MaxPool4d(nn.Module):
     """
