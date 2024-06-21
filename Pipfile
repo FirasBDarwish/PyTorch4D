@@ -8,6 +8,8 @@ torch = "*"
 pytest = "*"
 
 [dev-packages]
+twine = "*"
+build = "*"
 
 [requires]
 python_version = "3.9"
