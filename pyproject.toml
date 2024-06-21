@@ -9,7 +9,7 @@ dependencies = [
 ]
 name = "torch4d"
 description = "Implementation of various functional and class 4D methods compatible with PyTorch"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   { name= "Firas Darwish", email= "fbd2014@nyu.edu" },
 ]
