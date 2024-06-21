@@ -7,7 +7,7 @@ A set of Pytorch compatible modules for use with 4D tensors
 <br />
 <p align="center">
 
-  <h3 align="center">ConvKAN</h3>
+  <h3 align="center">PyTorch4D</h3>
 
   <p align="center">
    4D Layers and Functions Compatible with PyTorch
