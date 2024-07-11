@@ -2,7 +2,7 @@
 
 import pytest
 from unittest.mock import patch
-from torch4d.functional import max_pool4d, drop_block4d
+from torch4d.functional import max_pool4d, drop_block4d, spatial_dropout4d
 import torch
 
 class Tests:
@@ -17,3 +17,10 @@ class Tests:
         inputOldShape = input.shape
         drop_block4d(input, p = 0.2, block_size = (100, 1, 2, 2), inplace = True)
         assert input.shape == inputOldShape
+
+    def test_spatial_dropout4d(self):
+        input = torch.randn(32, 100, 400, 2, 8, 80) # 100 channels
+        OldNoChannels = input.shape[1]
+        spatial_dropout4d(input, p=0.2, inplace=True)
+        NewNoChannels = input.shape[1]
+        assert NewNoChannels <= OldNoChannels

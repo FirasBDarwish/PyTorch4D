@@ -110,3 +110,23 @@ def drop_block4d(input: Tensor, p: float, block_size: Union[int, tuple], inplace
     else:
         input = input * noise * normalize_scale
     return input
+
+def spatial_dropout4d(X: Tensor, p: float, inplace: bool = False, training: bool = True) -> Tensor:
+    """
+    Forward propagation
+    Args:
+        X: input of shape (batch_size, channels, time, extensor-flexor, height, width)
+        p: probability to drop (likelihood of channel to be dropped)
+        inplace: if True, do operation in place.
+        training: if training
+    Returns:
+        X: Dropped out activations (done in place if inplace is True) if training, else just returns X unchanged
+    """
+    if training:
+        binomial = torch.distributions.binomial.Binomial(probs=1-p)
+        binomial = binomial
+        if inplace:
+            X.mul_(binomial.sample(X.size()[0:2]).to(X.device).unsqueeze(2).unsqueeze(3).unsqueeze(4).unsqueeze(5)).mul_(1.0/(1-p)) # untested
+        else:
+            X = X * binomial.sample(X.size()[0:2]).to(X.device).unsqueeze(2).unsqueeze(3).unsqueeze(4).unsqueeze(5) * (1.0/(1-p))
+    return X
