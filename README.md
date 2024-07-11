@@ -57,13 +57,13 @@ Using this package should be fairly simple!
 Once you've installed the package and once in Python, make sure to import:
 
 ```python
-   from torch4d.torch4d import MaxPool4d, DropBlock4d
+   from torch4d.torch4d import MaxPool4d, DropBlock4d, SpatialDropout4d
 ```
 
 Alternatively, you can use the functions defined in torch4d.functional by importing
 
 ```python
-   from torch4d.functional import max_pool4d, drop_block4d
+   from torch4d.functional import max_pool4d, drop_block4d, spatial_dropout4d
 ```
 
 <!-- ROADMAP -->
@@ -80,7 +80,8 @@ Distributed under the GNU General Public License. See `LICENSE` for more informa
 <!-- Authors -->
 ## Authors
 
-Your Name - [firasbdarwish](https://www.linkedin.com/in/firasbdarwish/) - fbd2014@nyu.edu
+[firasbdarwish](https://www.linkedin.com/in/firasbdarwish/) - fbd2014@nyu.edu
+[dhiyaalajorf] - da2863@nyu.edu
 
 Project Link: [https://github.com/FirasBDarwish/PyTorch4D](https://github.com/FirasBDarwish/PyTorch4D)
 
