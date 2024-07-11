@@ -80,8 +80,7 @@ Distributed under the GNU General Public License. See `LICENSE` for more informa
 <!-- Authors -->
 ## Authors
 
-[firasbdarwish](https://www.linkedin.com/in/firasbdarwish/) - fbd2014@nyu.edu
-[dhiyaalajorf] - da2863@nyu.edu
+[firasbdarwish](https://www.linkedin.com/in/firasbdarwish/) - fbd2014@nyu.edu, dhiyaalajorf - da2863@nyu.edu
 
 Project Link: [https://github.com/FirasBDarwish/PyTorch4D](https://github.com/FirasBDarwish/PyTorch4D)
 
